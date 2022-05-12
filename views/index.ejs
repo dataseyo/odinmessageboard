@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <a href="/new">New Message</a>
+    <% for(var i = 0; i < messages.length; i++) { %>
+      <div class="message-container">
+        <p class="message-name"><%= messages[i].user %></p>
+        <p class="message-text"><%= messages[i].text %></p>
+        <p class="message-date"><%= messages[i].added %></p>
+      </div>
+    <% } %>
+
+  </body>
+</html>
+
